@@ -53,7 +53,7 @@ func (cache Cache) Keys() []string {
 func (cache *Cache) PutTill(key, value string, deadline time.Time) {
 	cache.data[key] = Data{
 		value:       value,
-		hasDeadline: false,
+		hasDeadline: true,
 		deadline:    deadline,
 	}
 }
